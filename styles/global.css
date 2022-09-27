@@ -1,5 +1,6 @@
 body {
-	background-color: black;
+	background-color: white;
+	padding:20px
 } 
 h3   {
 	color: green;
@@ -8,3 +9,7 @@ p,small,*    {
 	color: red;
 	font-size:20px /*!important*/;
 } 
+
+table.table-dark tbody tr th, table.table-dark tbody tr td {
+font-size:40px;	
+}
