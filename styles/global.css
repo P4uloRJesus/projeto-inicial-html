@@ -1,12 +1,15 @@
 
 
-@media(max-width: 600px) {
+/* @media((min-width: 300px) and (max-width: 600px)) {
+
+	body {
+		background-color: yellow!important;
+	} 
+} */
 
 body {
-	background-color: yellow!important;
-} 
+width: 100%;
 }
-
 
 p,small,*    {
 	color: red;
