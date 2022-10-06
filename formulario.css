@@ -38,7 +38,7 @@ border-radius: 5px;
 }
 
 .campo{
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
 }
 
 .campo label{
@@ -50,6 +50,11 @@ border-radius: 5px;
 fieldset.grupo .campo{
     float: left;
     margin-right: 1em;
+
+}
+
+.grupo{
+    display: flex;
 }
 
 .campo input[type="text"], .campo input [type="email"], .campo select, .campo textarea{
@@ -86,5 +91,10 @@ fieldset.grupo .campo{
 }
 
 #check {
-    display: inline-block;
+    display: inline;
+
+}
+
+#experiencia{
+    margin-top: 1.3em;
 }
