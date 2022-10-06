@@ -73,7 +73,7 @@ fieldset.grupo .campo{
     background:darkslategray;
     border: 0;
     margin-bottom: 1em;
-    color: white;
+    color: rgb(45, 153, 35);
     padding: 0.2em 0.6em;
     box-shadow: 2px 2px 2px black(0,0,0,0.2);
     text-shadow: 1px 1px 1px black (0,0,0,0.5);
