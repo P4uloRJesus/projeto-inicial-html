@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <script src="https://kit.fontawesome.com/d35376beee.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
@@ -7,14 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/formulario.css " media="">
 
-    
+
     <title>formulario</title>
 </head>
+
 <body>
-    
-    <i class="fas fa-arrow-left"> </i> 
-    
-   
+
+    <a href="index.php" class="link"> <i class="fas fa-arrow-left" src="http://localhost/formulario-cadastro/"> </i></a>
+
+
 
     <div>
         <!-- <a href="index.html"> <img src="img/seta.png" alt="setinha" width="20px"  ></a> -->
@@ -22,32 +24,32 @@
         <p id="subtitulo">Complete com suas informações abaixo</p>
         <br>
     </div>
-        
+
     <form autocomplete="on" method="post" action="recebe.php">
         <fieldset class="grupo">
             <div class="campo">
                 <label for="nome"><strong>Nome</strong></label>
-                <input type="text" name="nome" id="nome" required >            
+                <input type="text" name="nome" id="nome" required>
             </div>
 
             <div class="campo">
                 <label for="sobrenome"><strong>Sobrenome</strong></label>
                 <input type="text" name="sobrenome" id="sobrenome" required>
-             </div>
+            </div>
         </fieldset>
 
         <div class="campo">
             <label for="email"><strong>Email</strong></label>
-            <input type="email" name="email" id="email" required>                        
+            <input type="email" name="email" id="email" required>
         </div>
 
         <div class="campo campo-opcoes">
             <label><strong> qual lado de aplicação você desenvolve? </strong></label>
             <label>
-                <input type="radio" name="devweb" value="frontend">Front-end
+                <input type="radio" name="devweb" value="front-end">Front-end
             </label>
             <label>
-                <input type="radio" name="devweb" value="backend">Back-end
+                <input type="radio" name="devweb" value="back-end">Back-end
             </label>
             <label>
                 <input type="radio" name="devweb" value="fullstack">Fullstack
@@ -56,18 +58,49 @@
 
         <div class="campo">
             <label for="quem ira ganhar a copa"><strong>quem ira ganhar a copa</strong></label>
-            <select id="quem ira ganhar a copa">
+            <select id="quem ira ganhar a copa" name="vencedor">
                 <option selected disabled value="">selecione</option>
-                <option>Brasil</option>
-                <option>Brazil</option>
-                <option>BR</option>
+                <option value="Brasil">Brasil</option>
+                <option value="Brazil">Brazil</option>
+                <option value="BR">BR</option>
             </select>
         </div>
 
+        <?php
+
+        $tecnologias = [
+            "HTML",
+            "PHP",
+            "JAVASCRIPT",
+            "JAVA",
+            "PYTHON",
+            "C#"
+        ];
+
+         //var_dump($tecnologias);
+
+        ?>
         <fieldset class="grupo2">
             <div id="check">
                 <label><strong>selecione as tecnologias que utiliza:</strong></label><br><br>
-                <input type="checkbox" id="tecnologia1" name="tecnologia1" value="HTML">
+
+                 <?php
+
+             foreach ($tecnologias as $key => $tec){ ?>
+
+                    <input type="checkbox" name="tecnologia1" id="tecnologia1" value="<?= $tec ?>">
+                    <label for="tecnologia1"><strong><?= $tec ?></strong></label>
+               <?php } ?>   
+
+                 
+
+
+               
+
+            </div>
+            <!-- <div id="check">
+                <label><strong>selecione as tecnologias que utiliza:</strong></label><br><br>
+                <input type="checkbox" name="tecnologia1" id="tecnologia1" value="HTML">
                 <label for="tecnologia1"><strong>HTML</strong></label>
                 <input type="checkbox" name="tecnologia2" id="tecnologia2" value="PHP">
                 <label for="tecnologia2"><strong>PHP</strong></label>
@@ -79,15 +112,15 @@
                 <label for="tecnologia5"><strong>PYTHON</strong></label>
                 <input type="checkbox" name="tecnologia6" id="tecnologia6" value="C#">
                 <label for="tecnologia6"><strong>C#</strong></label>
-                 
-            </div>
+
+            </div> -->
 
             <div class="campo">
 
                 <label><strong>Conte um pouco da sua experiencia</strong></label>
                 <textarea rows="5" style="width:26em;" id="experiencia " name="experiencia"></textarea>
             </div>
-            
+
             <button class="botao" type="submit">Concluido</button>
             <input type="reset" value="Limpar">
         </fieldset>
@@ -97,4 +130,5 @@
 
 
 </body>
+
 </html>

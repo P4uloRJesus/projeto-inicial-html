@@ -4,6 +4,13 @@
 
 }
 
+.link a:active {
+    color: black !important;
+    background-color: black;
+
+}
+
+
 #titulo{
     font-family: sans-serif;    
     color: darkslategray;

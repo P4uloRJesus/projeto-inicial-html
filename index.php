@@ -1,36 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-br">
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>SITE TESTE</title>
-	<link rel="icon" type="img/favicon.jpg"
-		href="https://user-images.githubusercontent.com/274624/98246874-2e18a800-1f73-11eb-8583-f2c1f7d293f0.gif">
-
-	<link rel="stylesheet" href="styles/global.css">
-	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-		crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-		crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
-		integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
-		crossorigin="anonymous"></script>
-
-
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-		integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-
-</head>
-
-
-
-
-<body class="">
-
+<?php include("includes/header.php") ?>
 	<nav class="navbar navbar-expand-lg bg-light">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">Navbar</a>
@@ -41,13 +10,13 @@
 			<div class="collapse navbar-collapse" id="navbarNavDropdown">
 				<ul class="navbar-nav">
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="novo 1.html">Home</a>
+						<a class="nav-link active" aria-current="page" href="index.php">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="pagina 2.html">pagina 2</a>
+						<a class="nav-link" href="pagina 2.html">Pagina 2</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="formulario.html">formulario</a>
+						<a class="nav-link" href="formulario.php">formulario</a>
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -78,6 +47,7 @@
 
 	<p style="font-size:25px"><b>modificado por joão</b></p>
 	<p style="font-size:25px"><b> exemplo de "b" ou "strong"</b></p>
+	<p style="font-size:25px"><strong> exemplo de "b" ou "strong"</strong></p>
 
 	<p><mark> exemplo de de "mark"</mark></p>
 
@@ -194,10 +164,7 @@
 		</style>
 
 		<p><a href="https://www.youtube.com/?hl=pt&gl=BR" target="_blank">youtube</a> </p>
-
-
-
-
+		
 	</body>
 
 </html>
