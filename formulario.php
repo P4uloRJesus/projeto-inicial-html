@@ -74,7 +74,9 @@
             "JAVASCRIPT",
             "JAVA",
             "PYTHON",
-            "C#"
+            "C#",
+            "C++",
+            "REACT"
         ];
 
         
@@ -88,45 +90,48 @@
 
                 <?php
 
-                /* $cont = 1;
+                $max = count($tecnologias);
+                echo "o total de tecnologias é $max <br>";
+
+                $cont = 1;
 
                 foreach ($tecnologias as $tec) : 
-                 */
+                 
 
                 //var_dump($key,$tec);
                 ?>
 
-                <!-- <input type="checkbox" name="tecnologia<?= $cont ?>" id="tecnologia<?= $cont ?>" value="<?= $tec ?>">
-                    <label for="tecnologia<?= $cont ?>"><strong><?= $tec ?></strong></label> -->
+                <input type="checkbox" name="tecnologia<?= $cont ?>" id="tecnologia<?= $cont ?>" value="<?= $tec ?>">
+                    <label for="tecnologia<?= $cont ?>"><strong><?= $tec ?></strong></label> 
                 <?php
-                /*  $cont++;                
-                endforeach */ ?>
+                  $cont++;                
+                endforeach  ?>
 
 
                 <?php
 
-                $max = count($tecnologias);
+                /* $max = count($tecnologias);
                     echo "o total de tecnologias é $max <br>";
-
+                     */
                 //$cont = 1;
                 
                  
 
-                for ($cont = 0; $cont <= 5; $cont++) :
+                /* for ($cont = 0; $cont <= 6; $cont++) :
 
 
                    // var_dump($tecnologias[$cont]);
 
                    // die;
                 ?>
-
+                ?>
                     <input type="checkbox" name="tecnologia[]" id="tecnologia<?= $cont + 1?>" value="<?= $tecnologias[$cont] ?>">
-                    <label for="tecnologia<?= $cont + 1?>"><strong><?= $tecnologias[$cont] ?></strong></label>
+                    <label for="tecnologia<?= $cont + 1 ?>"><strong><?= $tecnologias[$cont] ?></strong></label>
                 <?php
                 //$cont++;                
                 endfor ?>
-
-
+ */
+?>
 
 
 

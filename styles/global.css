@@ -16,9 +16,10 @@ p,small,*    {
 	font-size:20px /*!important*/;
 } 
 
-table.table-dark tbody tr th, table.table-dark tbody tr td {
+/* table.table-dark tbody tr th, table.table-dark tbody tr td {
 font-size:40px;	
-}
+
+} */
 
 .nav-item .nav-link{
 color: orangered;
@@ -27,3 +28,4 @@ color: orangered;
  h3   {
 	color: green!important;
 }
+
