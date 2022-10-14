@@ -1,11 +1,60 @@
 <?php
 
+//POO - Programação orientada a objeto (Sempre inicia classe com letra maiúscula)
+class Empresa {
+
+  //Atributos
+  private $name;
+  private $cnpj;
+  private $contact;
+
+//Função sempre inicia com nome minúsculo
+ public function setName($name){
+  $this->name = $name;
+ }
+
+ public function getName() {
+
+  //var_dump();
+  //die();
+
+  //Atribuição de variável
+  $name = 'teste';
+
+  //$this->name <> $name
+  return $this->name;
+
+ }
+
+}
+
+
+$empresa = new Empresa();
+$empresa2 = new Empresa();
+
+$test = (bool) 0;
+
+$empresa->setName($test === false);
+$empresa2->setName('    IPAC Prime     ');
+
+
+$nomeEmpresa = null;
+
+var_dump($nomeEmpresa ? 'OK' : 'falso');
+
+$nomeEmpresa = 'outra empresa';
+$empresa->setName($nomeEmpresa);
+
+var_dump($nomeEmpresa, $empresa->getName());
+die();
+
+
 // phpinfo()
 
 $dados = $_POST;
 
 echo "<h1>formulario </h1> <br>";
-//var_dump($dados, isset($dados['tecnologia3'])); 
+var_dump($dados); 
 //die;
 
 /* echo $dados['nome'];
@@ -45,6 +94,10 @@ if (isset($dados['tecnologia'])) : ?>
  <?php
 
 endif;
+
+  if ($dados['experiencia']){
+    echo "Sua experiência: {$dados['experiencia']}";
+}
 
 ?>
 
@@ -87,6 +140,7 @@ if ($dados['experiencia']){
   echo "experiencia: ";
 }
  */
+
   ?>
 
 

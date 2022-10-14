@@ -32,10 +32,6 @@ $empresas = [
 		"fundacao" =>"1991"
 	]
 	
-	
-
-
-
 ];
 
 

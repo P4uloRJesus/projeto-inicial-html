@@ -24,23 +24,23 @@
         <p id="subtitulo">Complete com suas informações abaixo</p>
         <br>
     </div>
-
-    <form autocomplete="on" method="post" action="recebe.php">
+    <!-- action="recebe.php" -->
+ <form autocomplete="on" method="post" > 
         <fieldset class="grupo">
             <div class="campo">
                 <label for="nome"><strong>Nome</strong></label>
-                <input type="text" name="nome" id="nome" required>
+                <input type="text" name="nome" id="nome">
             </div>
 
             <div class="campo">
                 <label for="sobrenome"><strong>Sobrenome</strong></label>
-                <input type="text" name="sobrenome" id="sobrenome" required>
+                <input type="text" name="sobrenome" id="sobrenome">
             </div>
         </fieldset>
 
         <div class="campo">
             <label for="email"><strong>Email</strong></label>
-            <input type="email" name="email" id="email" required>
+            <input type="email" name="email" id="email">
         </div>
 
         <div class="campo campo-opcoes">
@@ -157,15 +157,26 @@
             <div class="campo">
 
                 <label><strong>Conte um pouco da sua experiencia</strong></label>
-                <textarea rows="5" style="width:26em;" id="experiencia " name="experiencia"></textarea>
+                <textarea rows="5" style="width:26em;" id="experiencia " name="experiencia" placeholder="escreva sua experiencia aqui"></textarea>
             </div>
 
-            <button class="botao" type="submit">Concluido</button>
+            <button name="enviado" class="botao" type="submit">Concluido</button>
             <input type="reset" value="Limpar">
         </fieldset>
 
 
     </form>
+    <?php
+    
+    $dados = $_POST;
+    /* var_dump($dados);
+    die(); */
+     if (isset($dados['enviado'])) {
+
+        echo $dados['nome'];
+     }
+
+    ?>
 
 
 </body>
