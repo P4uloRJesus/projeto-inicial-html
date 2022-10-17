@@ -1,5 +1,7 @@
 <?php
 
+/* header("Location: index.php");
+exit; */
 //POO - Programação orientada a objeto (Sempre inicia classe com letra maiúscula)
 class Empresa {
 
@@ -28,7 +30,7 @@ class Empresa {
 
 }
 
-
+//criando objetos da class empresa
 $empresa = new Empresa();
 $empresa2 = new Empresa();
 

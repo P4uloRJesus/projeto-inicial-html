@@ -5,11 +5,13 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>SITE TESTE</title>
+	<title><?= isset($title) && $title ? $title : "SITE TESTE" ?></title>
 	<link rel="icon" type="img/favicon.jpg"
 		href="https://user-images.githubusercontent.com/274624/98246874-2e18a800-1f73-11eb-8583-f2c1f7d293f0.gif">
 
-	<link rel="stylesheet" href="styles/global.css">
+		<script src="https://kit.fontawesome.com/d35376beee.js" crossorigin="anonymous"></script>
+
+
 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
 		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
 		crossorigin="anonymous"></script>

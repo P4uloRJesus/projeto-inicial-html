@@ -35,7 +35,10 @@ $empresas = [
 ];
 
 
+
+$title = "Home";
 include("includes/header.php") ?>
+<link rel="stylesheet" href="styles/global.css">
 <nav class="navbar navbar-expand-lg bg-light">
 	<div class="container-fluid">
 		<a class="navbar-brand" href="#">Navbar</a>
@@ -144,7 +147,6 @@ teste<sub> exemplo de "sub"</sub>teste</p>
 	}
 </style>
 
-<body>
 
 	<h2>A basic HTML table</h2>
 
@@ -199,6 +201,4 @@ teste<sub> exemplo de "sub"</sub>teste</p>
 
 	<p><a href="https://www.youtube.com/?hl=pt&gl=BR" target="_blank">youtube</a> </p>
 
-</body>
-
-</html>
+<?php include("includes/footer.php") ?>
