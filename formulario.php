@@ -1,8 +1,7 @@
-
 <?php
-$title='formulario';
+$title = 'formulario';
 
-require("includes/logica-usuario.php");
+require("includes/sessao.php");
 include("includes/header.php");
 
 //var_dump($_SESSION["dados"])
@@ -22,18 +21,16 @@ unset($_SESSION["dados"]);
     <p id="subtitulo">Complete com suas informações abaixo</p>
     <br>
 </div>
-<!-- action="recebe.php" -->
-<form autocomplete="on" method="post" action="loadingform.php">
+
+<form autocomplete="on" method="post" action="processa.php">
     <fieldset class="grupo">
         <div class="campo">
             <label for="nome"><strong>Nome</strong></label>
-            <input type="text" name="nome" id="nome" 
-                class="form-control <?= isset($dadosVal) && !$dadosVal['nome'] ? 'is-invalid' : '' ?>" 
-                value="<?= isset($dadosVal) ? $dadosVal['nome'] : "" ?>" required>
+            <input type="text" name="nome" id="nome" class="form-control <?= isset($dadosVal) && !$dadosVal['nome'] ? 'is-invalid' : '' ?>" value="<?= isset($dadosVal) ? $dadosVal['nome'] : "" ?>" required>
 
-            <?php if(isset($dadosVal) && !$dadosVal['nome']): ?>
+            <?php if (isset($dadosVal) && !$dadosVal['nome']) : ?>
                 <div class="invalid-feedback">
-                        Nome obrigatorio.
+                    Nome obrigatorio.
                 </div>
             <?php endif; ?>
         </div>
@@ -175,20 +172,20 @@ unset($_SESSION["dados"]);
 
 
 //var_dump($dados);
-   /* die(); */
+/* die(); */
 if (isset($dados['enviado'])) {
-    unset($dados['enviado']); 
-    
+    unset($dados['enviado']);
+
     $dados = $_POST;
-    $dadosVal=[];
+    $dadosVal = [];
     header("Location: index.php");
     exit;
 
     $dadosVal['nome'] = trim($dados['nome']);
 
-    var_dump($dados['nome'],$dadosVal['nome']);
+    var_dump($dados['nome'], $dadosVal['nome']);
 
-    if ($dadosVal['nome']){
+    if ($dadosVal['nome']) {
         echo "seu nome é {$dadosVal['nome']}";
     }
 

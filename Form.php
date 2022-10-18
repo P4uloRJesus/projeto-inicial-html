@@ -1,5 +1,5 @@
 <?php
-require("includes/logica-usuario.php");
+require("includes/sessao.php");
 
 class formulario{
   private $nome;
