@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include_once("conexao.php");
 
 $nome = filter_input( INPUT_POST, 'nome', FILTER_DEFAULT);
@@ -11,10 +12,11 @@ var_dump($nome,$email);
 $resultado_usuario = mysqli_query($conn, $result_usuario);
 
 if(mysqli_insert_id($conn) ) {
-
+  $_SESSION['msg'] = "<p style ='color:green;'>Usuario cadastrado com sucesso</p>";
   header("location: formulario.php");
 }
 
 else{
+  $_SESSION['msg'] = "<p style='color:red;'>Usuario não foi cadastrado com sucesso</p>";
   header("location: formulario.php");
 }

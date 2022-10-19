@@ -1,4 +1,5 @@
 <?php
+session_start();
 $title = 'formulario';
 
 require("includes/sessao.php");
@@ -20,13 +21,21 @@ unset($_SESSION["dados"]);
     <h1 id="titulo">Formulario teste</h1>
     <p id="subtitulo">Complete com suas informações abaixo</p>
     <br>
+    <?php
+    if (isset($_SESSION['msg'])) {
+        echo $_SESSION['msg'];
+        unset($_SESSION['msg']);
+    }
+    ?>
+
+
 </div>
 
 <form autocomplete="on" method="post" action="processa.php">
     <fieldset class="grupo">
         <div class="campo">
             <label for="nome"><strong>Nome</strong></label>
-            <input type="text" name="nome" id="nome" class="form-control <?= isset($dadosVal) && !$dadosVal['nome'] ? 'is-invalid' : '' ?>" value="<?= isset($dadosVal) ? $dadosVal['nome'] : "" ?>" required>
+            <input minlength="5" type="text" name="nome" id="nome" class="form-control <?=  isset($dadosVal) && !$dadosVal['nome'] ? 'is-invalid' : '' ?>" value="<?= isset($dadosVal) ? $dadosVal['nome'] : "" ?>" required>
 
             <?php if (isset($dadosVal) && !$dadosVal['nome']) : ?>
                 <div class="invalid-feedback">
@@ -36,7 +45,7 @@ unset($_SESSION["dados"]);
         </div>
         <div class="campo">
             <label for="sobrenome"><strong>Sobrenome</strong></label>
-            <input type="text" name="sobrenome" id="sobrenome">
+            <input minlength="5" type="text" name="sobrenome" id="sobrenome">
         </div>
     </fieldset>
 
