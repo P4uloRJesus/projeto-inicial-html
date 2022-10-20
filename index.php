@@ -57,14 +57,14 @@ include("includes/header.php") ?>
 					<a class="nav-link" href="formulario.php">formulario</a>
 				</li>
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-						Dropdown link
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+						Banco de Dados
 					</a>
-					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="#">Action</a></li>
-						<li><a class="dropdown-item" href="#">Another action</a></li>
-						<li><a class="dropdown-item" href="#">Something else here</a></li>
-					</ul>
+					<div class="dropdown-menu">
+					<a class="dropdown-item" href="http://localhost/phpmyadmin/sql.php?db=celke&table=usuarios&pos=0">Banco de Dados</a>
+					<a class="dropdown-item" href="listar.php">Lista de registros </a>
+					<!-- <a class="dropdown-item" href="#">Something else here</a> -->
+					</div>
 				</li>
 			</ul>
 		</div>
@@ -200,5 +200,7 @@ teste<sub> exemplo de "sub"</sub>teste</p>
 	</style>
 
 	<p><a href="https://www.youtube.com/?hl=pt&gl=BR" target="_blank">youtube</a> </p>
+
+	
 
 <?php include("includes/footer.php") ?>

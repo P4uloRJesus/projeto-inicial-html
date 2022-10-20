@@ -11,6 +11,8 @@ include_once("conexao.php");
   <title>CRUD- Listar</title>
 </head>
 <body>
+  <a href="formulario.php">Formulario</a><br>
+  <a href="listar.php">Lista</a><br>
   <h1>Listar Usuário</h1>
   <?php 
   if(isset($_SESSION['msg'])){
@@ -59,16 +61,22 @@ if($error = mysqli_error($conn)){
 
   //limitar os links antes depois 
   $max_links = 2;
-  echo "<a href='listar.php?pagina=1'>primeira </a>";
+  echo "<a href='listar.php?pagina=1'> primeira </a>";
 
   for($pag_ant = $pagina - $max_links; $pag_ant <= $pagina - 1; $pag_ant++){
     if($pag_ant>= 1){
-    echo "<a href='listar.php?pagina=$pag_ant'>$pag_ant</a>";
+    echo "<a href='listar.php?pagina= $pag_ant '> $pag_ant </a>";
     }
   }
   echo "$pagina ";
 
-  echo "<a href='listar.php?pagina=$quantidade_pg'>ultima</a>";
+  for($pag_dep = $pagina + 1; $pag_dep <= $pagina + $max_links; $pag_dep++) {
+    if($pag_dep <= $quantidade_pg) {
+      echo "<a href='listar.php?pagina= $pag_dep '> $pag_dep </a>";
+    }
+  }
+
+  echo "<a href='listar.php?pagina= $quantidade_pg '> ultima </a>";
 
   ?>
   

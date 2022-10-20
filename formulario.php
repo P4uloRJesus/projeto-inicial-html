@@ -35,7 +35,7 @@ unset($_SESSION["dados"]);
     <fieldset class="grupo">
         <div class="campo">
             <label for="nome"><strong>Nome</strong></label>
-            <input minlength="5" type="text" name="nome" id="nome" class="form-control <?=  isset($dadosVal) && !$dadosVal['nome'] ? 'is-invalid' : '' ?>" value="<?= isset($dadosVal) ? $dadosVal['nome'] : "" ?>" required>
+            <input minlength="5" type="text" name="nome" id="nome" class="form-control <?= isset($dadosVal) && !$dadosVal['nome'] ? 'is-invalid' : '' ?>" value="<?= isset($dadosVal) ? $dadosVal['nome'] : "" ?>" required>
 
             <?php if (isset($dadosVal) && !$dadosVal['nome']) : ?>
                 <div class="invalid-feedback">
