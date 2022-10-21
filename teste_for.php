@@ -9,4 +9,11 @@ endfor;
 for ($contador = 0; $contador <= 10; $contador++):
   echo "9 x $contador = ". ($contador*9). "<br>";
 endfor;
+
+$a = isset($_GET["ano"]) ? $_GET["ano"]
+
+
+
+
+
 ?>

@@ -17,6 +17,7 @@ if(mysqli_insert_id($conn) ) {
 }
 
 else{
+  //var_dump($conn);
   $_SESSION['msg'] = "<p style='color:red;'>Usuario não foi cadastrado com sucesso</p>";
   header("location: formulario.php");
 }

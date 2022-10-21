@@ -31,7 +31,7 @@ unset($_SESSION["dados"]);
 
 </div>
 
-<form autocomplete="on" method="post" action="processa.php">
+<form autocomplete="on" method="POST" action="processa.php">
     <fieldset class="grupo">
         <div class="campo">
             <label for="nome"><strong>Nome</strong></label>
@@ -180,14 +180,14 @@ unset($_SESSION["dados"]);
 <?php
 
 
-//var_dump($dados);
-/* die(); */
+/* var_dump($dados);
+ die();  */
 if (isset($dados['enviado'])) {
     unset($dados['enviado']);
 
     $dados = $_POST;
     $dadosVal = [];
-    header("Location: index.php");
+    header("Location: formulario.php");
     exit;
 
     $dadosVal['nome'] = trim($dados['nome']);
